@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import AirHeader from 'assets/AirHeader.svg';
+import CardList from 'UI/CardList';
+import SearchBox from 'UI/SearchBox';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className="App">
+        <img src={AirHeader} className="app-logo" alt="logo" />
       </header>
-    </div>
+      <main>
+        <div className="title">The Person Finder</div>
+        <div className="description">
+          If you just can’t find someone and need to know what they look like, you’ve come to the right place! Just type
+          the name of the person you are looking for below into the search box!
+        </div>
+      </main>
+    </>
   );
-}
+};
 
 export default App;
