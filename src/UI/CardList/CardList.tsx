@@ -3,10 +3,22 @@ import Card from 'UI/Card/Card';
 import { Person } from 'App';
 
 const CardList = ({ people }: { people: Array<Person> }) => {
+  console.log('at card list', people);
   return (
     <div>
       Card List
-      {/* <Card /> */}
+      {people.map((person, i) => {
+        return (
+          <Card
+            key={i}
+            id={people[i].id}
+            name={people[i].name}
+            email={people[i].email}
+            avatar={people[i].avatar}
+            description={people[i].description}
+          />
+        );
+      })}
     </div>
   );
 };
