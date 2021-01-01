@@ -5,18 +5,18 @@ import SearchBox from 'UI/SearchBox/SearchBox';
 import { MOCK_DATA_URL } from 'constants/constants';
 import './App.css';
 
-export interface IRobot {
+export interface Person {
   name: string;
   id: number;
   email: string;
 }
 
-interface IAppProps {}
+// interface IAppProps {}
 
-interface IAppState {
-  robots: Array<IRobot>;
-  searchfield: string;
-}
+// interface IAppState {
+//   robots: Array<IRobot>;
+//   searchfield: string;
+// }
 
 const App = () => {
   const [people, setPeople] = useState([]);
@@ -42,7 +42,7 @@ const App = () => {
           If you just can’t find someone and need to know what they look like, you’ve come to the right place! Just type
           the name of the person you are looking for below into the search box!
         </div>
-        <CardList />
+        <CardList people={people} />
       </main>
     </>
   );
