@@ -5,10 +5,11 @@
   flex-direction: row;
   align-items: flex-start;
   padding: 0px;
+  margin: 24px 0px;
+  overflow: hidden;
 }
 
 .avatar {
-  width: 95px;
   height: 95px;
   border-radius: 2px;
 }
@@ -23,10 +24,26 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 100%;
-  border: solid;
+  height: 95px;
+  line-height: 24px;
 }
 .avatar img {
   width: 95px;
   height: 95px;
+}
+@media only screen and (max-width: 600px) {
+  .app-logo img {
+    margin-left: -100px;
+  }
+}
+.card:hover {
+  animation: grow 1s linear ease-in;
+}
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
