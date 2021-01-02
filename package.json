@@ -2,6 +2,7 @@
   "name": "air-person-finder",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://unachoza.github.io/Air-Person-Finder",
   "dependencies": {
     "@emotion/react": "^11.0.0",
     "@testing-library/jest-dom": "^5.11.8",
@@ -22,7 +23,9 @@
     "start": "react-scripts start  \"NODE_PATH=./src\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
