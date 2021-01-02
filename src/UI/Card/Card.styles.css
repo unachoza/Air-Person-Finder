@@ -8,6 +8,9 @@
 }
 
 .avatar {
+  width: 95px;
+  height: 95px;
+  border-radius: 2px;
 }
 
 .name {
@@ -15,6 +18,15 @@
   font-weight: bold;
 }
 
-.details {
+.description {
   font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  border: solid;
+}
+.avatar img {
+  width: 95px;
+  height: 95px;
 }
