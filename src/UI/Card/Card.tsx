@@ -8,12 +8,12 @@ export interface Person {
   email: string;
 }
 
-const Card = ({ username, name, email }: Person) => {
+const Card = ({ id, name, email }: Person) => {
   return (
     <>
       <div className="card">
         <div className="avatar">
-          <div>{username}</div>
+          <img alt="avatar" src={`https://robohash.org/${id}?size=200x200`} />
         </div>
         <div className="description">
           <div className="name">{name}</div>
