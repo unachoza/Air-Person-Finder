@@ -4,20 +4,20 @@ import 'UI/Card/Card.styles.css';
 export interface Person {
   name: string;
   id: number;
-  avatar: string;
-  description: string;
+  username: string;
+  email: string;
 }
 
-const Card = ({ avatar, description, name }: Person) => {
+const Card = ({ username, name, email }: Person) => {
   return (
     <>
       <div className="card">
         <div className="avatar">
-          <img src={avatar} alt="person avatar" />
+          <div>{username}</div>
         </div>
         <div className="description">
           <div className="name">{name}</div>
-          <div>{description}</div>
+          <div>{email}</div>
         </div>
       </div>
     </>

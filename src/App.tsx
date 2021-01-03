@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import AirHeader from 'assets/AirHeader.svg';
 import CardList from 'UI/CardList/CardList';
 import SearchBox from 'UI/SearchBox/SearchBox';
-import { MOCK_DATA_URL } from 'constants/constants';
+import { ROBOTS_URL } from 'constants/constants';
 import Loading from 'UI/Loading/Loading';
 import './App.css';
 
 export interface Person {
   name: string;
   id: number;
-  avatar: string;
-  description: string;
+  username: string;
+  email: string;
 }
 // Person[]
 
@@ -24,7 +24,7 @@ const App = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        let response = await fetch(MOCK_DATA_URL);
+        let response = await fetch(ROBOTS_URL);
         let data = (await response.json()) || [];
         setPeople(data);
       } catch {
