@@ -1,4 +1,10 @@
-input {
+input.input-box {
   height: 40px;
   width: 100%;
+  transition: all 1s ease-in-out;
+}
+
+input.input-box:focus {
+  transition: all 1s ease-in forwards;
+  background-color: #b3d2f1;
 }

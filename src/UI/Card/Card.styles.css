@@ -7,10 +7,13 @@
   padding: 0px;
   margin: 24px 0px;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
 }
 .card:hover {
-  background-color: lightblue;
   animation: grow 1s linear ease-in;
+  transform: scale(1.1);
+  border: rgb(153, 230, 227) solid 3px;
+  border-radius: 5px;
 }
 
 .avatar {
@@ -38,14 +41,5 @@
 @media only screen and (max-width: 600px) {
   .app-logo img {
     margin-left: -100px;
-  }
-}
-
-@keyframes grow {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.5);
   }
 }

@@ -12,13 +12,11 @@ export interface Person {
   username: string;
   email: string;
 }
-// Person[]
 
 const PersonArray: Person[] = [];
 
 const App = () => {
   const [people, setPeople] = useState(PersonArray);
-  console.log({ people });
   const [searchInput, setSearchInput] = useState('');
 
   useEffect(() => {
@@ -36,7 +34,6 @@ const App = () => {
   }, []);
 
   const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    // @ts-ignore
     setSearchInput(event.target.value);
   };
   const filterPeople = people.filter((person: Person) => {
@@ -53,7 +50,7 @@ const App = () => {
           If you just can’t find someone and need to know what they look like, you’ve come to the right place! Just type
           the name of the person you are looking for below into the search box!
         </div>
-
+        {people.length < 1 && <Loading />}
         <SearchBox searchChange={onSearchChange} />
         <CardList people={filterPeople} />
       </main>

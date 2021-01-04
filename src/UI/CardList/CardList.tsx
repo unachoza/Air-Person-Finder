@@ -8,8 +8,8 @@ const CardList = ({ people }: { people: Array<Person> }) => {
     <ul className="cardList-container">
       {people.map((person) => {
         return (
-          <li>
-            <Card key={person.id} id={person.id} name={person.name} username={person.username} email={person.email} />
+          <li key={person.id}>
+            <Card id={person.id} name={person.name} username={person.username} email={person.email} />
           </li>
         );
       })}
