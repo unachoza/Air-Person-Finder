@@ -18,6 +18,8 @@ interface UserRequest {
   loading: boolean;
 }
 
+const cache: { [key: string]: Person[] } = {};
+
 const App = () => {
   const [people, setPeople] = useState<Person[]>([]);
   const [searchInput, setSearchInput] = useState('');
@@ -27,9 +29,15 @@ const App = () => {
     const getData = async () => {
       try {
         setUserRequest({ loading: true, error: false });
-        let response = await fetch(ROBOTS_URL);
-        let data = (await response.json()) || [];
-        setPeople(data);
+        if (cache[ROBOTS_URL]) {
+          let data = cache[ROBOTS_URL];
+          setPeople(data);
+        } else {
+          let response = await fetch(ROBOTS_URL);
+          let data = (await response.json()) || [];
+          cache[ROBOTS_URL] = data;
+          setPeople(data);
+        }
         setUserRequest({ loading: false, error: false });
       } catch {
         setUserRequest({ loading: false, error: true });
@@ -45,7 +53,7 @@ const App = () => {
     return person?.name.toLowerCase().includes(searchInput.toLowerCase());
   });
   return (
-    <div data-testid="component-app">
+    <>
       <header className=" fixed-top">
         <img src={AirHeader} className="header" alt="logo" />
       </header>
@@ -60,7 +68,7 @@ const App = () => {
           <CardList people={filterPeople} loading={userRequest.loading} />
         )}
       </main>
-    </div>
+    </>
   );
 };
 

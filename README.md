@@ -6,13 +6,19 @@
 2. Run npm install
 3. Run npm start
 
+## Demo
+
+![Air Person Finder Demo](https://res.cloudinary.com/dh41vh9dx/image/upload/v1609780351/AirDemo.gif)
+
+## Summary
+
 ## Build Criteria
 
 - [ ] Polish
 
-  ⋅⋅\* With User Experience in mind, I added a loading spinner to signal to the user something is happening. As research results return, I added a crescendo effect for each card.
+  ⋅ With User Experience in mind, I added a loading spinner to signal to the user something is happening. As research results return, I added a crescendo effect for each card.
 
-  ⋅⋅\*General annimations: When hovering over cards, they grow in size and highlight. Input onfocus, the border changes color to highlight this element is active.
+  ⋅General annimations: When hovering over cards, they grow in size and highlight. Input onfocus, the border changes color to highlight this element is active.
 
 - [ ] Responsiveness
 
@@ -38,53 +44,30 @@
 
   ⋅ Contrast meets accessibility requirements.
 
-  \*This is very superficial knowledge of accessability plus I ran used lighthouse and it passed. I will continue to work on this
-
-## Design Patterns
-
-## Technical Decisions
-
-## Scaling
-
-## Process
-
-## Demo
-
-![Air Person Finder Demo](https://res.cloudinary.com/dh41vh9dx/image/upload/v1609780351/AirDemo.gif)
-
-## Online Tools
-
-## Summary
-
-## Future iterations / What I would do better
-
--Implement sass, I have two annimations that are repetitive. With sass, I can convert them into loops and itterate through
--More Test / Integration tests. I'm still learning tests, currently I've tested a few pure functions. I wrote descriptions for some other tests that I will continue to research
-
-- [ ] Polish
-
-  Time permitting, try to find ways to enhance the experience of the site with loading states, animations, and design enhancements.
-
-- [ ] Responsiveness
-
-  We are purposefully not providing a mobile design because we'd like to see what you can come up with when designs haven't been given. Use your best judgment on how you think the page would respond at smaller sizes. The page should be able to be resized down to `320px` wide without compromising the UX.
-
-- [ ] SEO friendliness
-
-  Use best practice semantic markup and structured data.
-
-- [ ] Accessibility
-
-  Think about screen readers and users with any disabilities. Follow the best practices as set forth and discussed by [The A11Y Project](https://a11yproject.com/).
+  \*This is very superficial knowledge of accessability plus I ran used lighthouse and it passed. I will continue to work on this\*
 
 - [ ] Performance
 
-  The faster your page loads and performs while using it, the better.
+  ⋅ \*Currently i'm not using the mockdata fetch, it was blocked, The data I am using doesn't have 3K results. If it did, I would address performance issue using memoization. Perhaps doing a mini fetch of 10 items, display those (what would be visible on initial render), then fetch the rest (code splitting)\*
+
+  ⋅ Using Next.js would provide a CDN
 
 - [ ] Testing
-
-  Tests proving your application works make us happy. Integration tests in particular!
+      ⋅ I have incorporated a few unit tests. Currently my code coverage is 62.5%. I will work on this
 
 - [ ] Code Structure
+      ⋅ I'm using Directory structure for my Architecture Pattern
 
-  We will be looking at how you structured your React components. We strongly encourage using TypeScript as it helps a new developer (like the person who will be reviewing your code) understand how your components work
+  ⋅ Written in Typescript :)
+
+## Technical Decisions
+
+- I chose to react hooks over class components because it scales better, is cleaner to read, useEffect can handle most of component lifecycle methods which keeps logic organized.
+
+## Future iterations / What I would do better
+
+- Implement sass, I have two annimations that are repetitive. With sass, I can convert them into loops and itterate through
+
+- More Test / Integration tests. I'm still learning tests, currently I've tested a few pure functions. I wrote descriptions for some other tests that I will continue to research
+
+- To handle future scaling, I would implement Redux to maintain unidirectional data flow, organization, single source of truth/state. I would deploy with Next.js. I would spend more time with my memoization, because currently, I think it needs to be set to local storage, but i'm not sure. I would look into image optimization as well.
