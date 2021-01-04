@@ -55,7 +55,7 @@ const App = () => {
   return (
     <>
       <header className=" fixed-top">
-        <img src={AirHeader} className="header" alt="logo" style={{ width: '100%' }} />
+        <img src={AirHeader} className="header" alt="logo" />
       </header>
       <main>
         <div className="title">The Person Finder</div>
