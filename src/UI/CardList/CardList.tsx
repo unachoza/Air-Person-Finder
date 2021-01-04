@@ -4,16 +4,24 @@ import { Person } from 'App';
 import 'UI/CardList/CardList.styles.css';
 
 const CardList = ({ people }: { people: Array<Person> }) => {
+  console.log(people);
+
   return (
-    <ul className="cardList-container">
-      {people.map((person) => {
-        return (
-          <li key={person.id}>
-            <Card id={person.id} name={person.name} username={person.username} email={person.email} />
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      {people.length < 1 ? (
+        <div className="error-message">oops no results</div>
+      ) : (
+        <ul className="cardList-container">
+          {people.map((person) => {
+            return (
+              <li key={person.id}>
+                <Card id={person.id} name={person.name} username={person.username} email={person.email} />
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </>
   );
 };
 export default CardList;

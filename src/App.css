@@ -43,3 +43,8 @@ main {
     margin-left: -100px !important;
   }
 }
+.error-message {
+  margin: 50px;
+  font-size: 20px;
+  color: rgb(235, 92, 92);
+}
