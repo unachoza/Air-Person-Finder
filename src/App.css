@@ -27,7 +27,6 @@ main {
   left: 0;
   z-index: 10;
   height: 11vh;
-  background-color: white;
 }
 .error-message {
   margin: 50px;
