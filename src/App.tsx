@@ -18,15 +18,10 @@ interface UserRequest {
   loading: boolean;
 }
 
-const PersonArray: Person[] = [];
-
 const App = () => {
-  const [people, setPeople] = useState(PersonArray);
+  const [people, setPeople] = useState<Person[]>([]);
   const [searchInput, setSearchInput] = useState('');
-  const [userRequest, setUserRequest] = useState({
-    loading: false,
-    error: false,
-  });
+  const [userRequest, setUserRequest] = useState<UserRequest>({ loading: false, error: false });
 
   useEffect(() => {
     const getData = async () => {
@@ -37,10 +32,7 @@ const App = () => {
         setPeople(data);
         setUserRequest({ loading: false, error: false });
       } catch {
-        setUserRequest({
-          loading: false,
-          error: true,
-        });
+        setUserRequest({ loading: false, error: true });
       }
     };
     getData();
@@ -63,9 +55,10 @@ const App = () => {
         <SearchBox searchChange={onSearchChange} />
         {userRequest.loading && <Loading />}
         {userRequest.error ? (
-          <div className="error-message">oops there was an error! Please refresh</div>
+          <div className="error-message">Oops there was an error! Please refresh! </div>
         ) : (
-          <CardList people={filterPeople} />
+          // people={filterPeople} loading={userRequest.loading}
+          <CardList people={filterPeople} loading={userRequest.loading} />
         )}
       </main>
     </>

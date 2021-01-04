@@ -27,7 +27,7 @@
 }
 
 .description {
-  font-size: 14px;
+  margin-left: 5%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;

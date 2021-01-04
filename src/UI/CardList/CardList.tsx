@@ -3,12 +3,15 @@ import Card from 'UI/Card/Card';
 import { Person } from 'App';
 import 'UI/CardList/CardList.styles.css';
 
-const CardList = ({ people }: { people: Array<Person> }) => {
-  console.log(people);
+interface CardProps {
+  people: Person[];
+  loading: boolean;
+}
 
+const CardList = ({ people, loading }: CardProps) => {
   return (
     <>
-      {people.length < 1 ? (
+      {people.length < 1 && !loading ? (
         <div className="error-message">oops no results</div>
       ) : (
         <ul className="cardList-container">

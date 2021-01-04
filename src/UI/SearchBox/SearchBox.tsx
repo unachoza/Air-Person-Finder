@@ -8,7 +8,11 @@ interface ISearchBoxProps {
 const SearchBox = ({ searchChange }: ISearchBoxProps) => {
   return (
     <>
-      <input type="text" className="input-box" placeholder="Type a name..." onChange={searchChange} />
+      <label>
+        {' '}
+        Search
+        <input type="text" className="input-box" placeholder="Type a name..." onChange={searchChange} />
+      </label>
     </>
   );
 };
