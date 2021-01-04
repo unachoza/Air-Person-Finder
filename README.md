@@ -14,7 +14,7 @@
 
 ## Demo
 
-![Air Person Finder Demo](https://res.cloudinary.com/dh41vh9dx/video/upload/v1609780072/AirDemo.mov)
+![Air Person Finder Demo](https://res.cloudinary.com/dh41vh9dx/image/upload/v1609780351/AirDemo.gif)
 
 ## Online Tools
 
