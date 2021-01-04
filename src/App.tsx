@@ -47,7 +47,7 @@ const App = () => {
   return (
     <>
       <header className=" fixed-top">
-        <img src={AirHeader} id="app-logo" alt="logo" />
+        <img src={AirHeader} className="app-logo" alt="logo" />
       </header>
       <main>
         <div className="title">The Person Finder</div>
@@ -55,9 +55,8 @@ const App = () => {
         <SearchBox searchChange={onSearchChange} />
         {userRequest.loading && <Loading />}
         {userRequest.error ? (
-          <div className="error-message">Oops there was an error! Please refresh! </div>
+          <div className="error-message">Oops there was an error! Please refresh the page! </div>
         ) : (
-          // people={filterPeople} loading={userRequest.loading}
           <CardList people={filterPeople} loading={userRequest.loading} />
         )}
       </main>

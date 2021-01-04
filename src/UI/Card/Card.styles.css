@@ -37,9 +37,24 @@
 .avatar img {
   width: 95px;
   height: 95px;
+  margin-left: 0;
 }
-@media only screen and (max-width: 600px) {
-  .app-logo img {
-    margin-left: -100px;
+@media only screen and (max-device-width: 568px) {
+  .avatar img {
+    width: 80px;
+    height: 80px;
+  }
+  .avatar {
+    height: 80px;
+  }
+  .description {
+    height: 80px;
+    line-height: 20px;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .card {
+    margin: 10px 0px;
   }
 }
