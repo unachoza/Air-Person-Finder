@@ -68,6 +68,8 @@
 
 - Implement sass, I have two annimations that are repetitive. With sass, I can convert them into loops and itterate through
 
+- I would come up with cuter error messages replacing "Oops there is an error" and "Oops no results." I contemplated a gif, decided against it because I couldn't find anything that matched Air's color pallette (based off air.inc) and that wasn't too load/ abrupt for user experience
+
 - More Test / Integration tests. I'm still learning tests, currently I've tested a few pure functions. I wrote descriptions for some other tests that I will continue to research
 
 - To handle future scaling, I would implement Redux to maintain unidirectional data flow, organization, single source of truth/state. I would deploy with Next.js. I would spend more time with my memoization, because currently, I think it needs to be set to local storage, but i'm not sure. I would look into image optimization as well.
