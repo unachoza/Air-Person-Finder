@@ -1,53 +1,29 @@
-# Air Person Finder[See Live](https://unachoza.github.io/Air-Person-Finder/)
+# Air Person Finder[See Live](https://unachoza.github.io/Air-Person-Finder)
 
-This 4 hour build
+## How to Run App
 
-# How to Run App
+## Design Patterns
 
-# Design Patterns
+## Technical Decisions
 
-# Technical Decisions
+## Scaling
 
-## Future iterations / What I would do better
-
-more user engagement with micro animaitons /
-
-# Scaling
-
-# Process
+## Process
 
 #### Code Snipet
 
-# Demo
+## Demo
 
-# Online Tools
+![Air Person Finder Demo](https://res.cloudinary.com/dh41vh9dx/video/upload/v1609780072/AirDemo.mov)
 
-# Summary
+## Online Tools
 
-Create and deploy a React site based on [this Figma design](https://www.figma.com/file/WSfh9nIFwBxmGg4OBVJ5PR/Frontend-Developer-Challenge?node-id=0%3A1). Use the product spec below to understand what you will be building. Your site should be committed to a **public** Github repo and deployed to a publicly accessible URL.
+## Summary
 
-If you are unable to complete everything within **4 hours**, please send whatever you have!
+## Future iterations / What I would do better
 
-# Product Spec
-
-You're to build a person finder! The page will show a list of people (a name, avatar and description) and the user should be able to scroll the page and down the **entire** list of filtered (if applied) people. On load, the page should be able to scroll the 3000 people.
-
-The search box allows the user to live filter out the list by the `name` property. There are no API calls that need to be made to fetch the data. Use the mock data below and do all of the filtering client-side.
-
-[MOCK_DATA (2).json](<https://s3-us-west-2.amazonaws.com/secure.notion-static.com/090639df-57c7-4fd7-9472-67e00f8aa05f/MOCK_DATA_(2).json>)
-
-# Deliverables
-
-Once you've finished, please email [Dan Wilt](mailto:dan@air.inc) with the following:
-
-1. A public link to the deployed site
-2. A link to the public \*\*Github repo where your code can be reviewed
-
-# Evaluation Criteria
-
-The design you build **must** match the Figma link provided! Please no custom designs. We're looking for pixel perfection! We care more about matching the product spec than any of the other evaluation criteria.
-
-In addition to matching the provided design, your performance will be evaluated based on the following technical areas
+-Implement sass, I have two annimations that are repetitive. With sass, I can convert them into loops and itterate through
+-More Test / Integration tests. I'm still learning tests, currently I've tested a few pure functions. I wrote descriptions for some other tests that I will continue to research
 
 - [ ] Polish
 

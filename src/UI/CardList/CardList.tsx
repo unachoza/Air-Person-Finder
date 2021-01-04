@@ -12,7 +12,7 @@ const CardList = ({ people, loading }: CardProps) => {
   return (
     <>
       {people.length < 1 && !loading ? (
-        <div className="error-message">oops no results</div>
+        <div className="error-message">Oops no results</div>
       ) : (
         <ul className="cardList-container">
           {people.map((person) => {

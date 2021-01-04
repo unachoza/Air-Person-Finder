@@ -45,9 +45,9 @@ const App = () => {
     return person?.name.toLowerCase().includes(searchInput.toLowerCase());
   });
   return (
-    <>
+    <div data-testid="component-app">
       <header className=" fixed-top">
-        <img src={AirHeader} className="app-logo" alt="logo" />
+        <img src={AirHeader} className="header" alt="logo" />
       </header>
       <main>
         <div className="title">The Person Finder</div>
@@ -60,7 +60,7 @@ const App = () => {
           <CardList people={filterPeople} loading={userRequest.loading} />
         )}
       </main>
-    </>
+    </div>
   );
 };
 

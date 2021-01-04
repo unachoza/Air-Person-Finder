@@ -9,7 +9,11 @@ test('renders constains title', () => {
   expect(titleElement).toBeInTheDocument();
 });
 
-it('passes basic empty', () => {});
+test('renders without error', () => {
+  const wrapper = shallow(<App />);
+  const appComponent = wrapper.find('[data-testid ="component-app"]');
+  expect(appComponent.length).toBe(1);
+});
 
 test('fetches data', () => {});
 
